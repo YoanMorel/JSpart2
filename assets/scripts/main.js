@@ -34,18 +34,19 @@
 
 // Exercice 5
 
-// var myImg = document.getElementsByTagName('img');
-var myImg = document.querySelectorAll('img');
-
-var imgIndex = function(index) {
-  myImg[index].setAttribute('src', 'assets/img/image' + (index + 1) + '_2.jpg');
-}
-
-myImg.forEach(function(img, i){
-  img.addEventListener('mouseover', function(){
-    imgIndex(i);
-  });
-});
+// PARTIE BOUCLE
+// var myImg = document.getElementsByTagName('img'); //Var pour boucle FOR
+// var myImg = document.querySelectorAll('img'); // Var pour boucle FOREACH
+//
+// var imgIndex = function(index) {
+//   myImg[index].setAttribute('src', 'assets/img/image' + (index + 1) + '_2.jpg');
+// }
+//
+// myImg.forEach(function(img, i){
+//   img.addEventListener('mouseover', function(){
+//     imgIndex(i);
+//   });
+// });
 
 // for(let i = 0; i < myImg.length; i++) {
 //   let mySrc = myImg[i];
@@ -53,3 +54,12 @@ myImg.forEach(function(img, i){
 //     imgIndex(i);
 //   });
 // }
+
+// PARTIE CHEATEY
+function changeImg(img) {
+  img.src='assets/img/' + img.id + '_2.jpg';
+}
+
+function imgReturn(img) {
+  img.src='assets/img/' + img.id + '.jpg';
+}
